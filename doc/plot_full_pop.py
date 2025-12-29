@@ -22,7 +22,9 @@ import pandas as pd
 import os
 from scipy.cluster.hierarchy import dendrogram, linkage
 
-plt.rcParams['font.sans-serif'] = "Arial"
+#plt.rcParams['font.sans-serif'] = "Arial"
+plt.rcParams['font.sans-serif'] = ["DejaVu Sans", "Liberation Sans", "sans-serif"]
+
 plt.rcParams['figure.facecolor'] = "w"
 plt.rcParams['figure.autolayout'] = True
 
@@ -116,7 +118,8 @@ norm = mpl.colors.BoundaryNorm(bounds, cmap.N)
 
 sm = plt.cm.ScalarMappable(cmap=cmap, norm=norm)
 sm._A = []
-cbar = fig.colorbar(sm,
+cbar = fig.colorbar(sm, 
+                    ax=ax,
                     fraction=0.035, 
                     pad=0.05,
                     shrink=0.6,

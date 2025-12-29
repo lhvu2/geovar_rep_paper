@@ -21,11 +21,22 @@ import matplotlib.gridspec as gridspec
 import os
 
 # setting Font to Arial
+# import matplotlib as mpl
+# mpl.rcParams['font.family'] = "Arial"
+# mpl.rcParams['font.sans-serif'] = "Arial"
+# mpl.rcParams['font.size'] = "12"
+# mpl.font_manager._rebuild()
+
 import matplotlib as mpl
-mpl.rcParams['font.family'] = "Arial"
-mpl.rcParams['font.sans-serif'] = "Arial"
-mpl.rcParams['font.size'] = "12"
-mpl.font_manager._rebuild()
+import matplotlib.pyplot as plt
+
+# This was needed for very old matplotlib versions; it no longer exists.
+# Safe to remove on modern versions.
+# mpl.font_manager._rebuild()
+
+# Optional: give matplotlib a sane default font on Linux so it doesn’t insist on Arial
+plt.rcParams["font.family"] = "sans-serif"
+plt.rcParams["font.sans-serif"] = ["DejaVu Sans", "Liberation Sans", "sans-serif"]
 
 
 def no_spines(ax):

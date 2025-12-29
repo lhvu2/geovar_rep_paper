@@ -1,4 +1,4 @@
-name: geodist
+name: geodist2
 channels:
   - defaults
   - conda-forge
@@ -15,5 +15,4 @@ dependencies:
   - snakemake-minimal
   - htslib
   - wget
-prefix: /Users/danielrice/miniconda3/envs/geodist
 
