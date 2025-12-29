@@ -1,0 +1,25 @@
+[project]
+name = "geodist"
+version = "0.1.0"
+description = "Geodist environment / tools"
+readme = "README.md"
+requires-python = ">=3.9"
+
+dependencies = [
+  "numpy",
+  "pandas",
+  "matplotlib",
+  "scipy",
+  "click",
+  "tqdm",
+  "pyliftover"
+]
+
+[project.optional-dependencies]
+# Just for documentation / grouping; pip will NOT install these unless you map them
+# to real PyPI names. These are conda/system tools.
+conda = [
+  "snakemake-minimal",
+  "htslib",
+  "wget"
+]
